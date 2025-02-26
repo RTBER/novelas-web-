@@ -1,0 +1,295 @@
+
+/* Contenedor principal de "Sobre Nosotros" */
+.sobre-nosotros-container {
+    display: flex; /* Usamos flexbox para las dos columnas (texto e iframe) */
+    justify-content: flex-start; /* Alinea las columnas al principio del contenedor */
+    padding: 0px 0px; /* Añade relleno dentro del contenedor para que el contenido no esté pegado a los bordes */
+    margin-top: -20px; /* Ajusta este valor, más negativo subirá más el contenedor */
+    margin-bottom: 10px; /* Espacio entre el contenedor de "Sobre Nosotros" y el footer */
+    flex-wrap: wrap; /* Permite que las columnas se apilen si la pantalla es pequeña */
+}
+
+/* Columna de texto de la sección "Sobre Nosotros" */
+.preguntas-frecuentes-texto {
+    flex: 3; /* La columna de texto ocupa el doble de espacio que la columna de Facebook */
+    max-width:90%; /* Limita el ancho máximo de la columna de texto */
+    text-align: left; /* Alineación del texto a la izquierda */
+    padding: 0px; /* Relleno alrededor del contenido de la columna */
+}
+
+/* Estilo para el título dentro de la columna de texto */
+.sobre-nosotros-texto h1 {
+    font-family: 'Poppins', sans-serif; /* Usamos Poppins para los títulos */
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffd900ef;
+    margin-bottom: 10px;
+}
+.sobre-nosotros-texto h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; /* Usamos Poppins para los títulos */
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffd900ef;
+}
+
+
+/* Estilo para los párrafos dentro de la columna de texto */
+.sobre-nosotros-texto p {
+    font-family: 'Georgia', serif;    
+    font-weight: 500; /* Peso de la fuente */
+    font-size: 18px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Columna de Facebook (iframe) */
+.sobre-nosotros-facebook {
+    flex: 1; /* La columna de Facebook ocupa el espacio restante */
+    display: flex; /* Usamos flexbox para centrar el iframe */
+    justify-content: center; /* Centra el iframe dentro de la columna */
+    align-items: flex-start; /* Alinea el iframe al principio de la columna (arriba) */
+    padding: 20px; /* Añade relleno alrededor del iframe */
+    margin-left: 160px; /* Añade separación desde la izquierda */
+}
+
+/* Estilo del iframe de Facebook */
+.sobre-nosotros-facebook iframe {
+    width: 100%;
+    max-width: 300px; /* Limita el ancho del iframe */
+    height: 550px; /* Fija la altura del iframe */
+    border: none; /* Elimina el borde del iframe */
+}
+
+/* Estilo para el footer */
+#footer {
+    padding: 0px 0; /* Relleno vertical en el footer */
+    text-align: center; /* Centra el texto dentro del footer */
+    color: white; /* Color de texto blanco */
+    margin-top: auto; /* Asegura que el footer se quede al final de la página */
+    width: 100%; /* El footer ocupa todo el ancho disponible */
+}
+
+
+
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Contenedor principal de "Sobre Nosotros" */
+    .sobre-nosotros-container {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: flex-start; /* Alineación a la izquierda */
+        gap: 20px; /* Espacio entre columnas */
+        width: 100%; /* Asegura que ocupe el 100% del ancho */
+        box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+    }
+
+    /* Columna de texto "Sobre Nosotros" */
+    .sobre-nosotros-texto {
+        flex: none;
+        width: 100%; /* Asegura que ocupe el 100% del contenedor */
+        max-width: 100%; /* Limita el ancho máximo */
+        padding: 10px;
+        text-align: left; /* Alineación a la izquierda */
+        box-sizing: border-box; /* Incluye el padding en el ancho */
+    }
+
+    /* Columna de Facebook */
+    .sobre-nosotros-facebook {
+        flex: none;
+        width: 100%; /* Ocupa el 100% del contenedor */
+        padding: 10px;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box; /* Incluye el padding en el ancho */
+    }
+
+    /* Estilo del iframe de Facebook */
+    .sobre-nosotros-facebook iframe {
+        width: 100%; /* El iframe ocupa el 100% del contenedor */
+        height: 300px; /* Ajusta la altura */
+        max-width: 100%; /* Asegura que no se salga del contenedor */
+    }
+
+/* Ajustes para el título dentro de la columna de texto */
+.sobre-nosotros-texto h1, .sobre-nosotros-texto h2 {
+    font-size: 20px; /* Tamaño responsivo */
+    word-wrap: break-word; /* Asegura que el texto largo se divida si es necesario */
+}
+
+/* Ajustes para los párrafos */
+.sobre-nosotros-texto p {
+    font-size: 15px; /* Tamaño responsivo */
+    word-wrap: break-word; /* Asegura que el texto largo se divida si es necesario */
+}
+
+/* Ocultar la columna de Facebook en pantallas pequeñas */
+.sobre-nosotros-facebook {
+        display: none;
+}
+
+
+}
+
+.responsive-img {
+    max-width: 100%; 
+    height: auto; 
+    max-height: 400px; /* Limita la altura */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  .novela-page {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+
+}
+
+.novela-image {
+    max-width:350px;
+    flex-shrink: 0;
+}
+
+.novela-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.novela-info {
+    flex: 1;
+}
+
+.novelos-info {
+    padding: 2px;
+    padding-left: 0px;
+    border-radius: 8px;
+}
+
+.novelo-title {
+    font-size: 19px !important;
+    color: #ffd700;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: "Poppins", Sans-serif ;
+}
+
+
+.novela-title {
+    font-size: 30px !important;
+    color: #8ea2b6 !important;
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-family: "Poppins", Sans-serif ;
+}
+
+.novelo-description {
+    margin: 3px 0;
+    line-height: 1.6;
+    word-wrap: break-word;
+    font-size: 17px;
+    color: #cccccc;
+    font-weight: 500;
+    font-family: 'Georgia', serif;
+}
+
+.novela-description {
+    margin: 3px 0;
+    line-height: 1.6;
+    word-wrap: break-word;
+    font-size: 17px;
+    color: #cccccc;
+    font-weight: 500;
+    font-family: 'Georgia', serif;
+}
+
+.description-title {
+    margin-top: 15px;
+    font-size: 19px !important;
+    color: #ffd700;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: "Poppins", Sans-serif ;
+}
+
+
+.facebook-link {
+    color: #ffd700; /* Color de Facebook */
+}
+
+
+/* Estilos para móviles (menos de 768px) */
+@media (max-width: 768px) {
+    .novela-page {
+        flex-direction: column; /* Apila los elementos verticalmente */
+    }
+    
+    .novela-image {
+        max-width: 90%; /* La imagen ocupa hasta el 90% del ancho del contenedor */
+        padding-top: 0px !important;
+        margin-left: auto;  /* Centra el contenedor horizontalmente */
+        margin-right: auto; /* Centra el contenedor horizontalmente */
+        display: block; /* Asegura que el contenedor sea un bloque para el centrado */
+    }
+    
+    .novela-title {
+        margin-top: 10px;
+        font-size: 20px !important;
+        color: #8ea2b6 !important;
+        font-weight: 600;
+        margin-bottom: 5px;
+        font-family: "Poppins", Sans-serif;
+        text-align: center; /* Centra el texto horizontalmente */
+        margin-left: auto;  /* Ajusta los márgenes para centrar el texto */
+        margin-right: auto; /* Ajusta los márgenes para centrar el texto */
+    }
+    
+    .description-title {
+        margin-top: -5px;
+        font-size: 19px !important;
+        color: #ffd700;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-family: "Poppins", Sans-serif ;
+    }
+    
+    .novelo-description {
+        font-size: 16px;
+
+    }
+    .novela-description {
+        line-height: 1.6;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+}
+
+/* Estilos para tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .novela-page {
+        gap: 15px; /* Reduce el espacio entre elementos */
+    }
+    
+    .novela-image {
+        max-width: 250px; /* Ajusta el tamaño de la imagen */
+    }
+}
+
+
+
+
+
+
+

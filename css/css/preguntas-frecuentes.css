@@ -1,0 +1,105 @@
+
+/* Contenedor principal de "Sobre Nosotros" */
+.preguntas-frecuentes-container {
+    display: flex; /* Usamos flexbox para las dos columnas (texto e iframe) */
+    justify-content: flex-start; /* Alinea las columnas al principio del contenedor */
+    padding: 0px 0px; /* Añade relleno dentro del contenedor para que el contenido no esté pegado a los bordes */
+    margin-top: -20px; /* Ajusta este valor, más negativo subirá más el contenedor */
+    margin-bottom: 10px; /* Espacio entre el contenedor de "Sobre Nosotros" y el footer */
+    flex-wrap: wrap; /* Permite que las columnas se apilen si la pantalla es pequeña */
+}
+
+/* Columna de texto de la sección "Sobre Nosotros" */
+.preguntas-frecuentes-container {
+    flex: 3; /* La columna de texto ocupa el doble de espacio que la columna de Facebook */
+    max-width:90%; /* Limita el ancho máximo de la columna de texto */
+    text-align: left; /* Alineación del texto a la izquierda */
+    padding: 0px; /* Relleno alrededor del contenido de la columna */
+}
+
+/* Estilo para el título dentro de la columna de texto */
+.preguntas-frecuentes-texto h1 {
+    font-family: 'Poppins', sans-serif; /* Usamos Poppins para los títulos */
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffd900ef;
+    margin-bottom: 10px;
+}
+.preguntas-frecuentes-texto h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; /* Usamos Poppins para los títulos */
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffd900ef;
+}
+
+.pregunta li{
+    font-family: 'Georgia', serif;    
+    font-weight: 500; /* Peso de la fuente */
+    font-size: 18px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 10px;
+
+}
+/* Estilo para los párrafos dentro de la columna de texto */
+.pregunta p {
+    font-family: 'Georgia', serif;    
+    font-weight: 500; /* Peso de la fuente */
+    font-size: 18px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Contenedor principal de "Sobre Nosotros" */
+
+    /* Columna de texto "Sobre Nosotros" */
+    .preguntas-frecuentes-container {
+        flex: none;
+        width: 100%; /* Asegura que ocupe el 100% del contenedor */
+        max-width: 100%; /* Limita el ancho máximo */
+        padding: 10px;
+        text-align: left; /* Alineación a la izquierda */
+        box-sizing: border-box; /* Incluye el padding en el ancho */
+    }
+
+
+/* Ajustes para el título dentro de la columna de texto */
+.preguntas-frecuentes-texto h1, .preguntas-frecuentes-texto h2 {
+    font-size: 20px; /* Tamaño responsivo */
+    word-wrap: break-word; /* Asegura que el texto largo se divida si es necesario */
+}
+
+/* Ajustes para los párrafos */
+.pregunta p {
+    font-size: 15px; /* Tamaño responsivo */
+    word-wrap: break-word; /* Asegura que el texto largo se divida si es necesario */
+}
+
+.pregunta li{
+    font-family: 'Georgia', serif;    
+    font-weight: 500; /* Peso de la fuente */
+    font-size: 15px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 10px;
+
+}
+}
+
+
+
+
+
+

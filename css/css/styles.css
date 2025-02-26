@@ -1,0 +1,690 @@
+
+:root {
+  --bg-color: #2d2d2d; 
+  --text-color: #e0e0e0;
+  --accent-color: #7f5af0;
+  --hover-color: #ffcc00;
+  --border-color: #3f3f3f;
+  --max-width: 1300px; /* Añadido */
+  --content-padding: 2rem; /* Añadido */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background: #1a1a1a;/* Tu nuevo color de fondo */
+}
+
+/* Clase contenedora principal 
+.main-container {
+
+}*/
+
+header {
+  background: var(--bg-color);
+  border-bottom: 4px solid var(--border-color);
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: var(--max-width); /* Modificado de 1400px a variable */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Mantenemos todos los estilos existentes hasta el media query... */
+
+.content-wrapper {
+  margin-top: 100px; /* Solo margen superior */
+}
+
+/* Nuevos ajustes para secciones específicas */
+.welcome-message,
+.carousel-wrapper,
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Añadir esto para el carrusel */
+.carousel-wrapper {
+  padding: 1rem 0;
+}
+
+/* Ajuste para el grid de novelas */
+.novels-container {
+  width: 100%;
+  padding-right: 0;
+}
+
+
+
+
+
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo svg {
+  width: 120px;  /* Tamaño aumentado */
+  height: 120px; /* Tamaño aumentado */
+  fill: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.desktop-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.desktop-menu a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease;
+  font-family: 'Poppins', sans-serif; /* Asegúrate de tener la fuente cargada */
+  font-weight: 600; /* Peso de la fuente */
+}
+
+.desktop-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: var(--hover-color);
+  transition: width 0.3s ease;
+}
+
+.desktop-menu a:hover::after {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* Menú Mobile (Oscuro) */
+.hamburger {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.hamburger-line {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--text-color);
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu {
+  display: none;
+  background: #2d2d2d;
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.mobile-menu li {
+  padding: 1rem 2rem;
+}
+
+.mobile-menu a {
+  color: var(--text-color);
+  text-decoration: none;
+  display: block;
+  transition: padding-left 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: var(--hover-color);
+  padding-left: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .logo svg {
+    width: 90px;  /* Tamaño aumentado para móvil */
+    height: 90px; /* Tamaño aumentado para móvil */
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
+
+  .hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}
+
+
+
+
+
+
+
+
+/* Asegura que el contenido no quede detrás del header */
+.content-wrapper {
+  margin-top: 60px; /* Altura del header */
+  padding: 0 2rem; /* Mismo padding que el nav-container */
+  max-width: 1400px; /* Mismo ancho máximo */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+/* Estilo del mensaje de bienvenida */
+.welcome-message {
+  margin-top: 50px; /* Altura del header */
+}
+
+
+
+
+
+
+
+
+
+/* Estilo para el contenedor del carrusel (centrado en la página) */
+.carousel-wrapper {
+  display: flex;
+  justify-content: center; /* Centra el carrusel horizontalmente */
+  align-items: center;     /* Centra el carrusel verticalmente */
+}
+
+/* Estilo del carrusel */
+.carousel {
+  position: relative;
+  width: 100%;              /* El carrusel ocupará el 81% del ancho de su contenedor */
+  overflow: hidden;         /* Evita que las imágenes se desborden */
+  border-radius: 10px;      /* Bordes redondeados para un acabado más suave */
+}
+
+/* Contenedor de las imágenes */
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 13px;                 /* Reduce el espacio entre las imágenes */
+}
+
+/* Estilo para las imágenes */
+
+.carousel-container img {
+width: 33.333%;            /* Cada imagen ocupa un tercio del ancho del carrusel */
+flex-shrink: 0;            /* Evita que las imágenes se reduzcan */
+object-fit: cover;         /* Asegura que las imágenes cubran el área sin deformarse */
+border-radius: 10px;       /* Bordes redondeados para las imágenes */
+}
+
+
+/* Estilo de los botones */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);  /* Centra los botones verticalmente */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  border-radius: 10px; 
+  color: #ffffff;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Botón anterior */
+#prev {
+  left: 10px;
+}
+
+/* Botón siguiente */
+#next {
+  right: 10px;
+}
+
+
+
+
+
+
+
+/* Título del mensaje de bienvenida */
+.welcome-message h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* Peso de la fuente, ajustable entre 400, 500, 700, etc. */
+  font-size: 25px;
+  font-weight: 600;
+  color: #ffd900ef;  
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Párrafo del mensaje de bienvenida */
+.welcome-message p {
+  font-family: 'Georgia', serif;    
+  font-weight: 500; /* Peso de la fuente */
+  font-size: 18px;
+  color: #cccccc;   /* --text-color */
+  margin: 0; /* Elimina márgenes */
+}
+
+
+
+
+
+/* Estilo general del contenedor principal */
+/* Estilo general del contenedor principal */
+.container {
+  display: flex;
+  padding-left:0.3rem; /* Mismo padding que el header */
+  justify-content: start; /* Alinea todo a la izquierda */
+  padding: 15px 13px 2px 0px;
+}
+/* Diseño para las tarjetas de novelas */
+.novelas-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas por fila */
+  gap: 20px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.facebook-container {
+  display: flex;
+  align-items: flex-start;
+  min-width: 300px; /* Evita que se encoja demasiado */
+  height: auto; /* La altura crece según el contenido */
+  flex-direction: column; /* Asegura que el contenido dentro sea vertical */
+  overflow: hidden; /* Para evitar que desborde */
+  margin-left: 60px; /* Mayor separación de las columnas de novelas */
+}
+/* Estilo de cada tarjeta */
+.columnas.novelas {
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #3f3f3f87;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Flexbox para alinear contenido verticalmente */
+  padding: 15px;
+  position: relative;
+  cursor: pointer;
+  transform: translateY(0);
+  transform-origin: center bottom;
+}
+
+/* Efecto al pasar el mouse */
+.columnas.novelas:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo de la imagen de la novela */
+.novelas-img {
+  width: 100%;
+  height: auto; /* Ajuste de altura para evitar imágenes tan grandes */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Título de la novela */
+.columnas.novelas h3 {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #cccccc;
+  line-height: 1.3;
+  text-transform: capitalize;
+  padding: 0 10px;
+  transition: color 0.3s ease;
+}
+
+/* Cambiar color del título en hover */
+.columnas.novelas:hover h3 {
+  color: #ffd900ef;  
+}
+
+/* Responsividad para pantallas más pequeñas (2 columnas) */
+@media (max-width: 768px) {
+
+  .columnas.novelas{
+      padding: 10px;
+  }
+  .columnas.novelas h3{
+      padding: 0;
+  }
+  .container {
+      padding: 0 0px;
+  }
+  .novelas-container {     
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+  }
+
+  .novelas-img {
+    height: 200px; /* Ajuste en la altura para pantallas más pequeñas */
+  }
+
+  .columnas.novelas h3 {
+    font-size: 13px; /* Aumento del tamaño del texto para mejor legibilidad */
+  }
+}
+
+
+
+
+
+
+/* Responsividad para pantallas medianas */
+@media (min-width: 821px) and (max-width: 1024px) {
+  /* Estilo general del contenedor principal 
+  .container {
+
+  }*/
+  
+  /* Diseño para las tarjetas de novelas 
+  .novelas-container {
+
+  }*/
+
+  .columnas.novelas {
+    padding: 10px;
+  }
+
+  .columnas.novelas h3 {
+    padding: 0;
+  }
+
+  .container {
+    padding: 0 0px;
+  }
+
+  .novelas-container {     
+    padding-top: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas medianas */
+  }
+
+  .novelas-img {
+    width: 100%;
+    height: auto !important; /* Ajuste en la altura para pantallas más pequeñas */
+  }
+
+  .columnas.novelas h3 {
+    font-size: 16px; /* Ajuste del tamaño del texto para mejor legibilidad */
+  }
+  .facebook-container{
+      display: none;
+  }
+}
+
+
+
+/* Responsividad para mini iPad (768px a 820px) */
+@media (min-width: 768px) and (max-width: 820px) {
+  .columnas.novelas {
+      padding: 10px;
+    }
+  
+    .columnas.novelas h3 {
+      padding: 0;
+    }
+  
+    .container {
+      padding: 0 0px;
+    }
+  
+    .novelas-container {     
+      padding-top: 20px;
+      grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas medianas */
+    }
+  
+    .novelas-img {
+      width: 100%;
+      height: auto !important; /* Ajuste en la altura para pantallas más pequeñas */
+    }
+  
+    .columnas.novelas h3 {
+      font-size: 16px; /* Ajuste del tamaño del texto para mejor legibilidad */
+    }
+    .facebook-container{
+        display: none;
+    }
+}
+
+
+
+
+
+
+/* Ocultar elementos en pantallas móviles (menos de 768px) */
+@media screen and (max-width: 768px) {
+.facebook-container{
+  display: none ;
+}
+  /* Estilo para el contenedor del carrusel (centrado en la página) */
+.carousel-wrapper {
+  display: flex;
+  justify-content: center; /* Centra el carrusel horizontalmente */
+  align-items: center;     /* Centra el carrusel verticalmente */
+}
+
+/* Estilo del carrusel */
+.carousel {
+  position: relative;
+  width: 100% !important;              /* El carrusel ocupará el 81% del ancho de su contenedor */
+  overflow: hidden;         /* Evita que las imágenes se desborden */
+  border-radius: 10px;      /* Bordes redondeados para un acabado más suave */
+}
+
+/* Contenedor de las imágenes */
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 12px!important ;                 /* Reduce el espacio entre las imágenes */
+}
+
+/* Estilo para las imágenes */
+
+.carousel-container img {
+width: 100% !important;            /* Cada imagen ocupa un tercio del ancho del carrusel */
+flex-shrink: 10;            /* Evita que las imágenes se reduzcan */
+object-fit: cover;         /* Asegura que las imágenes cubran el área sin deformarse */
+border-radius: 10px;       /* Bordes redondeados para las imágenes */
+}
+
+
+/* Estilo de los botones */
+.carousel-button {
+  top: 50%;
+  transform: translateY(100%) !important;  /* Centra los botones verticalmente */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  border-radius: 10px; 
+  color: #ffffff;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Botón anterior */
+#prev {
+  left: 10px;
+}
+
+/* Botón siguiente */
+#next {
+  right: 10px;
+}
+
+.welcome-message {
+  text-align: center; /* Centra el texto horizontalmente */
+  margin-bottom: 50px; /* Espaciado inferior */
+}
+
+/* Título del mensaje de bienvenida */
+.welcome-message h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* Peso de la fuente, ajustable entre 400, 500, 700, etc. */
+  font-size: 22px !important;
+  font-weight: 600;
+  color: #ffd900ef;  
+  margin-bottom: 10px; /* Espaciado inferior */
+} 
+
+/* Párrafo del mensaje de bienvenida */
+.welcome-message p {
+  font-family: 'Georgia', serif;    
+  font-weight: 500; /* Peso de la fuente */
+  font-size: 17px;
+  color: #cccccc;   /* --text-color */
+  margin: 0; /* Elimina márgenes */
+  margin-bottom: 0px !important;
+}
+
+.content-wrapper{
+  padding: 0 1rem !important;
+}
+.main-container{
+  padding: 0;
+  margin-top: -20px;
+}
+.novels-container {
+  display: grid; /* Usamos grid para el diseño de columnas */
+  grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas iguales */
+  grid-gap: 20px; /* Espacio entre las columnas y filas (ajusta este valor) */
+}
+
+.novels-container .column {
+  /* No necesitamos un ancho fijo, grid se encarga del tamaño */
+  margin: 0; /* Elimina márgenes innecesarios */
+}
+
+  .novels-container .column .novela-img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease !important; /* Transición suave para el zoom */
+  }
+
+  .column.novels{
+    position: relative;
+    height: 250px !important;
+  }
+
+
+  .column h3{
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      padding: 0px !important;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: rgb(224, 224, 224);
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500 !important;
+  }
+
+
+  .novela-img {
+     width: 100%;
+     height: 350px;
+     object-fit: cover;
+     border-radius: 8px;
+     transition: transform 0.3s ease;
+    }
+
+    column.novels::after {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: rgba(0, 0, 0, 0.1);
+       mix-blend-mode: multiply;
+      pointer-events: none;
+      }
+      
+      .column.novels:hover .novela-img {
+       transform: scale(1.1);
+      }
+}
+
+
+
+
+
+
+
+
+.link-novela {
+  text-decoration: none;
+}
+
+
+
+
+
+
