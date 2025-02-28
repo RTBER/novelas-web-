@@ -25,10 +25,10 @@ class HeaderComponent extends HTMLElement {
         </div>
 
         <ul class="mobile-menu">
-            <li><a href="/novelas-web-/index.html">Inicio</a></li>
-            <li><a href="/novelas-web-/pages/novelas.html">Novelas</a></li>
-            <li><a href="/novelas-web-/pages/preguntasfrecuentes.html">FAQ</a></li>
-            <li><a href="/novelas-web-/pages/sobrenosotros.html">Nosotros</a></li>
+          <li><a href="/novelas-web-/index.html">Inicio</a></li>
+          <li><a href="/novelas-web-/pages/novelas.html">Novelas</a></li>
+          <li><a href="/novelas-web-/pages/preguntasfrecuentes.html">FAQ</a></li>
+          <li><a href="/novelas-web-/pages/sobrenosotros.html">Nosotros</a></li>
         </ul>
       </nav>
     </header>
