@@ -77,7 +77,6 @@
     text-transform: capitalize;
     padding: 0 10px;
     transition: color 0.3s ease;
-    text-decoration: none;
   }
   
   /* Cambiar color del título en hover */
