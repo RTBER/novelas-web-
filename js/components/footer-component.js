@@ -70,9 +70,9 @@ class FooterComponent extends HTMLElement {
             © 2025 Sekai Novels. Todos los derechos reservados.
           </div>
           <div class="footer-legal">
-            <li><a href="/novelas-web-/politica-de-privacidad.html">Política de Privacidad</a></li>
-            <a href="/novelas-web-/politica-cookies.html">Política de Cookies</a>
-            <a href="/novelas-web-/aviso-legal.html">Aviso Legal</a>
+            <a href="/novelas-web-/pages/politica-de-privacidad.html">Política de Privacidad</a>
+            <a href="/novelas-web-/pages/politica-cookies.html">Política de Cookies</a>
+            <a href="/novelas-web-/pages/aviso-legal.html">Aviso Legal</a>
           </div>
         </div>
       `;
@@ -80,3 +80,5 @@ class FooterComponent extends HTMLElement {
   }
   
   customElements.define('footer-component', FooterComponent);
+
+
