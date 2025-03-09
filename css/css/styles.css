@@ -334,7 +334,7 @@ border-radius: 10px;       /* Bordes redondeados para las imágenes */
   display: flex;
   padding-left:0.3rem; /* Mismo padding que el header */
   justify-content: start; /* Alinea todo a la izquierda */
-  padding: 15px 13px 2px 0px;
+  padding: 0px 13px 2px 0px;
 }
 /* Diseño para las tarjetas de novelas */
 .novelas-container {
@@ -459,7 +459,6 @@ border-radius: 10px;       /* Bordes redondeados para las imágenes */
   }
 
   .novelas-container {     
-    padding-top: 20px;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas medianas */
   }
 
@@ -493,7 +492,6 @@ border-radius: 10px;       /* Bordes redondeados para las imágenes */
     }
   
     .novelas-container {     
-      padding-top: 20px;
       grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas medianas */
     }
   
@@ -582,7 +580,7 @@ border-radius: 10px;       /* Bordes redondeados para las imágenes */
 
 .welcome-message {
   text-align: center; /* Centra el texto horizontalmente */
-  margin-bottom: 50px; /* Espaciado inferior */
+  margin-bottom: 30px; /* Espaciado inferior */
 }
 
 .solo-movil{
@@ -792,7 +790,6 @@ height: 350px;
 object-fit: cover;
 border-radius: 10px;
 margin-bottom: 15px;
-/*  height: 400px;*/
 }
 
 .novela h3 {
