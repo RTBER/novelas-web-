@@ -865,12 +865,16 @@ box-sizing: border-box;
   padding: 0 0px;
   font-size: 13px; /* Tamaño de texto más pequeño */
 }
-.sobre-nosotros-texto h1,p {
+.sobre-nosotros-texto h1 {
 text-align: center;
 }
+
+
+
 .sobre-nosotros-texto h1{
 font-size: 22px;
 }
+
 .sobre-nosotros-texto p{
 font-size: 17px;
 }
