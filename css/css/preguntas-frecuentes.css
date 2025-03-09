@@ -83,6 +83,7 @@
 
 /* Ajustes para los párrafos */
 .pregunta p {
+    text-align: left !important;
     font-size: 17px; /* Tamaño responsivo */
     word-wrap: break-word; /* Asegura que el texto largo se divida si es necesario */
 }

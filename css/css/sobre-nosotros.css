@@ -115,12 +115,14 @@
 
 /* Ajustes para el título dentro de la columna de texto */
 .sobre-nosotros-texto h1, .sobre-nosotros-texto h2 {
+    text-align: left !important;
     font-size: 20px; /* Tamaño responsivo */
     word-wrap: break-word; /* Asegura que el texto largo se divida si es necesario */
 }
 
 /* Ajustes para los párrafos */
 .sobre-nosotros-texto p {
+    text-align: left !important;
     font-size: 17px; /* Tamaño responsivo */
     word-wrap: break-word; /* Asegura que el texto largo se divida si es necesario */
 }
