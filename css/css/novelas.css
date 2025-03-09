@@ -107,6 +107,12 @@
     .columnas.novelas h3 {
       font-size: 13px; /* Aumento del tamaño del texto para mejor legibilidad */
     }
+    .container {
+      display: flex;
+      padding-left:0.3rem; /* Mismo padding que el header */
+      justify-content: start; /* Alinea todo a la izquierda */
+      padding: 0px 0px 2px 0px !important;
+  }
   }
   
 

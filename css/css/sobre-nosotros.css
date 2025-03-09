@@ -121,7 +121,7 @@
 
 /* Ajustes para los párrafos */
 .sobre-nosotros-texto p {
-    font-size: 15px; /* Tamaño responsivo */
+    font-size: 17px; /* Tamaño responsivo */
     word-wrap: break-word; /* Asegura que el texto largo se divida si es necesario */
 }
 

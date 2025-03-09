@@ -20,55 +20,94 @@
         <!-- Columna izquierda: Contenido "Sobre Nosotros" -->
         <div class="sobre-nosotros-texto">
           <h1>Catálogo de Novelas</h1>
-          <p>¡Bienvenido a nuestro catálogo!</p>
-          <p>Aquí encontrarás todas las novelas disponibles en un solo lugar.</p>
+          <p>¡Bienvenido a nuestro catálogo! Aquí encontrarás todas las novelas disponibles en un solo lugar.</p>
           <p>Explora nuestras últimas novedades y mantente al día con tu historia favorita de manera rápida y sencilla.</p>
         </div>
         </div>
     </div>
 
+    <input type="text" id="searchInput" placeholder="Buscar novela...">
+    <select id="filterSelect">
+        <option value="all">Todos</option>
+        <option value="accion">Acción</option>
+        <option value="fantasia">Fantasía</option>
+        <option value="romance">Romance</option>
+        <option value="ciencia-ficcion">Ciencia Ficción</option>
+        <option value="aventura">Aventura</option>
+        <option value="comedia">Comedia</option>
+        <option value="isekai">Isekai</option>
+        <option value="reencarnacion">Reencarnación </option>
+        <option value="life">Slice of Life</option>
+        <option value="mundo">Construcción de Mundo</option>
+        <option value="drama">Drama</option>
+        <option value="psicologico">Psicológico</option>
+        <option value="escolar">Escolar</option>
+        <option value="estrategia">Estrategia</option>
+        <option value="misterio">Misterio</option>
+    </select>
+
+
     <div class="container main-container"> <!-- Aplicado aquí -->
+        
   <!-- Contenedor específico para la sección "Sobre Nosotros" -->
   <div class="container">
+    
     <div class="novelas-container">
-      <a href="../pages/Ore wa Seikan Kokka no Akutoku Ryōshu! (NL).html" class="link-novela">
-        <div class="columnas novelas">
-          <img src="../assets/Oreaku Inicio.jpg" alt="Portada de Ore wa Seikan Kokka no Akutoku Ryōshu!" class="novelas-img">
-          <h3>Ore wa Seikan Kokka no Akutoku Ryōshu!</h3>
+
+    <a href="#" class="link-novela">
+        <div class="novela" data-genero="accion,ciencia-ficcion,aventura,comedia,fantasia,isekai,reencarnacion">
+            <img src="/assets/Oreaku Inicio.jpg" alt="Novela de Ore wa Seikan Kokka no Akutoku Ryōshu!" >
+            <h3>Ore wa Seikan Kokka no Akutoku Ryōshu!</h3>
         </div>
-        </a>
-      <div class="columnas novelas">
-        <img src="../assets/Atashi wa Seikan Kokka no Eiyuu Kishi! - Portada.jpg" alt="Portada de Atashi wa Seikan Kokka no Eiyuu Kishi!" class="novelas-img">
-        <h3>Atashi wa Seikan Kokka no Eiyuu Kishi!</h3>
-      </div>
-      <div class="columnas novelas">
-        <img src="../assets/Kage no Jitsuryokusha ni Naritakute! - Portada.jpg" alt="Portada de Kage no Jitsuryokusha ni Naritakute!" class="novelas-img">
-        <h3>Kage no Jitsuryokusha ni Naritakute!</h3>
-      </div>
-      <div class="columnas novelas">
-        <img src="../assets/Overlord - Portada.jpg" alt="Portada de Kage no Jitsuryokusha ni Naritakute!" class="novelas-img">
-        <h3>Overlord</h3>
-      </div>
-      <div class="columnas novelas">
-        <img src="../assets/Tensei Shitara Slime Datta Ken - Portada.jpg" alt="Portada de Kage no Jitsuryokusha ni Naritakute!" class="novelas-img">
-        <h3>Tensei Shitara Slime Datta Ken </h3>
-      </div>
-      <div class="columnas novelas">
-        <img src="../assets/Danmachi - Portada.jpg" alt="Portada de Kage no Jitsuryokusha ni Naritakute!" class="novelas-img">
-        <h3>Danmachi</h3>
-      </div>
-      <div class="columnas novelas">
-        <img src="../assets/Classroom of the Elite - Portada.jpg" alt="Portada de Kage no Jitsuryokusha ni Naritakute!" class="novelas-img">
-        <h3>Classroom of the Elite</h3>
-      </div>
-      <div class="columnas novelas">
-        <img src="../assets/Blade & Bastard (NL) - Portada.jpg" alt="Portada de Kage no Jitsuryokusha ni Naritakute!" class="novelas-img">
-        <h3>Blade & Bastard</h3>
-      </div>
-      <div class="columnas novelas">
-        <img src="../assets/Sword Oratoria - Portada.jpg" alt="Portada de Kage no Jitsuryokusha ni Naritakute!" class="novelas-img">
-        <h3>Sword Oratoria</h3>
-      </div>
+    </a>
+    <a href="#" class="link-novela">
+        <div class="novela" data-genero="accion,ciencia-ficcion,aventura,comedia,fantasia">
+            <img src="/assets/Atashi wa Seikan Kokka no Eiyuu Kishi! - Portada.jpg" alt="Novela de Atashi wa Seikan Kokka no Eiyuu Kishi!" >
+            <h3>Atashi wa Seikan Kokka no Eiyuu Kishi!</h3>
+        </div>
+    </a>
+    <a href="#" class="link-novela">
+        <div class="novela" data-genero="accion,aventura,comedia,fantasia,isekai,reencarnacion">
+            <img src="/assets/Kage no Jitsuryokusha ni Naritakute! - Portada.jpg" alt="Novela de Kage no Jitsuryokusha ni Naritakute!" >
+            <h3>Kage no Jitsuryokusha ni Naritakute!</h3>
+        </div>
+    </a>
+    <a href="#" class="link-novela">
+        <div class="novela" data-genero="accion,aventura,comedia,fantasia,isekai,reencarnacion,life,mundo">
+            <img src="/assets/Tensei Shitara Slime Datta Ken - Portada.jpg" alt="Novela de Tensei Shitara Slime Datta Ken" >
+            <h3>Tensei Shitara Slime Datta Ken</h3>
+        </div>
+    </a>
+    <a href="#" class="link-novela">
+        <div class="novela" data-genero="accion,aventura,drama,isekai,psicologico,mundo,fantasia">
+            <img src="/assets/Overlord - Portada.jpg" alt="Novela de Overlord" >
+            <h3>Overlord</h3>
+        </div>
+    </a>
+    <a href="#" class="link-novela">
+        <div class="novela" data-genero="accion,aventura,romance,fantasia,comedia">
+            <img src="/assets/Danmachi - Portada.jpg" alt="Novela de Acción 1" >
+            <h3>Danmachi</h3>
+        </div>
+    </a>
+    <a href="#" class="link-novela">
+        <div class="novela" data-genero="psicologico,drama,escolar,estrategia,life,misterio">
+            <img src="/assets/Classroom of the Elite - Portada.jpg" alt="Novela de Acción 1" >
+            <h3>Classroom of the Elite</h3>
+        </div>
+    </a>
+    <a href="#" class="link-novela">
+        <div class="novela" data-genero="accion,drama,aventura,misterio">
+            <img src="/assets/Blade & Bastard (NL) - Portada.jpg" alt="Novela de Acción 1" >
+            <h3>Blade & Bastard</h3>
+        </div>
+    </a>
+    <a href="#" class="link-novela">
+        <div class="novela" data-genero="accion,aventura,romance,fantasia,comedia">
+            <img src="/assets/Sword Oratoria - Portada.jpg" alt="Novela de Acción 1" >
+            <h3>Sword Oratoria</h3>
+        </div>
+    </a>
     </div>
       </div>
   
@@ -94,6 +133,7 @@
   <footer-component></footer-component>
   <script src="../js/components/footer-component.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/script.js"></script>
   <script src="../js/components/header-component.js"></script>
 </body>
 </html>
